@@ -1,9 +1,9 @@
 body {
-  background-image: url('blurred-abstract-background-restaurant-wallpaper_548821-36535.avif');
+  background-image: url('images/blurred-abstract-background-restaurant-wallpaper_548821-36535.avif');
   background-size: cover;
 }
 h1 {
-  color: coral;
+  color: rgb(251, 250, 249);
 }
 .logo{
   display: block;
@@ -26,8 +26,8 @@ h1 {
 }
 
 .dropbtn1{
-  background-color: #e75e0e;
-  color: rgb(246, 241, 241);
+  background-color: #fefdfc;
+  color: rgb(8, 8, 8);
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -70,12 +70,12 @@ h1 {
 
 
 .dropbtn2 {
-  background-color: #04AA6D;
-  color: white;
+  background-color: #f8faf9;
+  color: rgb(5, 5, 5);
   padding: 16px;
   font-size: 16px;
   border: none;
-  border-radius: 25px;
+  border-radius: 25px;  
 
 }
 
