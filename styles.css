@@ -104,10 +104,14 @@ h1 {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content2 a:hover {background-color: #da6b6b;}
+.dropdown-content 2 a:hover {background-color: #da6b6b;}
 
 /* Show the dropdown menu on hover */
 .dropdown2:hover .dropdown-content2 {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown2:hover .dropbtn2 {background-color: #3e8e41;}
+
+
+/* styling navbar */
+.navbar navbar-dark bg-dark
