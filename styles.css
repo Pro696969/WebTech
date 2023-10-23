@@ -28,6 +28,7 @@ h1 {
 .dropbtn1{
   background-color: #fefdfc;
   color: rgb(8, 8, 8);
+  font-weight: 700;
   padding: 20px;
   font-size: 20px;
   border: none;
@@ -60,13 +61,13 @@ h1 {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content1 a:hover {background-color: #da6b6b}
+.dropdown-content1 a:hover {background-color: #040404; color: #f1f1f1;}
 
 /* Show the dropdown menu on hover */
 .dropdown1:hover .dropdown-content1 {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown1:hover .dropbtn1 {background-color: #e44b1c;}
+.dropdown1:hover .dropbtn1 {background-color: #8a7c78;}
 
 
 .dropbtn2 {
@@ -76,6 +77,7 @@ h1 {
   font-size: 20px;
   border: none;
   border-radius: 25px;  
+  font-weight: 700  ;
 
 }
 
@@ -104,13 +106,13 @@ h1 {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content 2 a:hover {background-color: #da6b6b;}
+.dropdown-content2 a:hover {background-color: #040404; color: #f1f1f1;}
 
 /* Show the dropdown menu on hover */
 .dropdown2:hover .dropdown-content2 {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown2:hover .dropbtn2 {background-color: #3e8e41;}
+.dropdown2:hover .dropbtn2 {background-color: #8a7c78;}
 
 
 /* styling navbar */
