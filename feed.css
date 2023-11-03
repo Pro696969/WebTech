@@ -1,0 +1,55 @@
+body {
+    /* display: flex; */
+    align-items: center;
+    background-image:url('images/mahim.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-color: #f0f0f0;  
+}
+.form {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: rgb(208, 229, 151);
+    display: block;
+    align-items: center;
+    margin-top: 350px;
+    margin-left: 650px;
+    font-size: 1.5rem;
+}
+.butt {
+    border-radius: 20px;
+    display: block;
+    font-size: large;
+    margin-left: auto;
+}
+ .sub {
+    font-weight: 500;
+    border-radius: 20px;
+    font-size: large;
+    margin-left: 75px;
+} 
+
+
+.res {
+    /* display: block; */
+    border-radius: 20px;
+    font-size: large;
+    margin-left: 25px;
+}
+
+.ip2 {
+    border-radius: 20px;
+    border: 2px solid rgb(16, 1, 24);
+    padding: 20px; 
+    width: 200px;
+    height: 15px;    
+}
+
+h1 {
+    color: aliceblue; display: block;
+    margin-left: 700px;
+    margin-bottom: -150px;
+    margin-top: 75px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}

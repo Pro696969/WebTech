@@ -8,7 +8,9 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
  </head>
+ <link rel="stylesheet" href="feed.css">
  <body>
+    <h1>FeedBack  Form</h1>
     <div id="root"></div>
     <script type="text/babel">
       class FeedbackForm extends React.Component {
@@ -35,23 +37,30 @@
 
         render() {
           return (
-            <form onSubmit={this.handleSubmit}>
-              <label>
+            <form onSubmit={this.handleSubmit} className="form">
+              <label className="hell">
                 Name:
-                <input type="text" name="name" onChange={this.handleChange} />
-              </label>
+                <input type="text" name="name" onChange={this.handleChange} className="ip2" />
+                <br/><br/> </label>
               <br />
               <label>
                 Email:
-                <input type="email" name="email" onChange={this.handleChange} />
-              </label>
+                <input type="email" name="email" className="ip2" onChange={this.handleChange} />
+                <br/><br/>
+                </label>
               <br />
               <label>
                 Feedback:
-                <textarea name="feedback" onChange={this.handleChange} />
-              </label>
+                <textarea name="feedback" onChange={this.handleChange} className="ip2"/>
+                <br/><br/>
+                </label>
               <br />
-              <button type="submit">Submit</button>
+              <div className="butt">
+              <button type="submit" className="sub">Submit</button>
+              <label>
+                <input type="reset" name="reset" className="res" />
+              </label>
+              </div>
             </form>
           );
         }
