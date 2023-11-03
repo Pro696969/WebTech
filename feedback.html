@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Feedback Form</title>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+ </head>
+ <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      class FeedbackForm extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            name: "",
+            email: "",
+            feedback: "",
+          };
+
+          this.handleChange = this.handleChange.bind(this);
+          this.handleSubmit = this.handleSubmit.bind(this);
+        }
+
+        handleChange(event) {
+          this.setState({ [event.target.name]: event.target.value });
+        }
+
+        handleSubmit(event) {
+          alert("Feedback submitted successfully!");
+          event.preventDefault();
+        }
+
+        render() {
+          return (
+            <form onSubmit={this.handleSubmit}>
+              <label>
+                Name:
+                <input type="text" name="name" onChange={this.handleChange} />
+              </label>
+              <br />
+              <label>
+                Email:
+                <input type="email" name="email" onChange={this.handleChange} />
+              </label>
+              <br />
+              <label>
+                Feedback:
+                <textarea name="feedback" onChange={this.handleChange} />
+              </label>
+              <br />
+              <button type="submit">Submit</button>
+            </form>
+          );
+        }
+      }
+
+      ReactDOM.render(<FeedbackForm />, document.getElementById("root"));
+    </script>
+ </body>
+</html>
