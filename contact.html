@@ -1,60 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact Us</title>
-    <style>
-        body {
-	    background-image:url('images/mahim.jpeg');/*replace this thingy with image src*/
-            /* position: relative; */
-            background-size: cover;
-            background-position: center;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }   
-
-        #content {
-            text-align: center;
-	    color:white;
-        }
-
-        #buttons {
-            margin-top: 20px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 18px;
-            margin: 5px;
-            text-decoration: none;
-            background-color: #0074cc;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .button:hover {
-            background-color: #0056a8;
-        }
-    </style>
+    <title>Contact Page</title>
 </head>
+<link rel="stylesheet" href="contact.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
 <body>
-    <div>
-    <div id="content">
-        <h1>Contact Us</h1>
-        <p>Contact no.911</p>
-	    <p>email:dummy@gmail.com</p>
-        <div id="buttons">
-            <a class="button" href="https://linktr.ee/restaurantgrp">Socials</a>
-            <button class="button" onclick="history.back()">Back</button>
-        </div>
-    </div>
-    </div>
+    <div id="root"></div>
+
+    <!-- React CDN links -->
+    <script src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"></script>
+
+    <!-- Babel CDN link for JSX compilation -->
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+    <script type="text/babel">
+        // ContactCard component
+        class ContactCard extends React.Component {
+            render() {
+                return (
+                    <div className="contact-card">
+                        <h2 className="mmm">{this.props.name}</h2>
+                        <p>Email: {this.props.email}</p>
+                        <p>Phone: {this.props.phone}</p>
+                    </div>
+                );
+            }
+        }
+
+        // ContactPage component
+        class ContactPage extends React.Component {
+            render() {
+                const contacts = [
+                    {
+                        name: "M C Krishna Kumar",
+                        email: "krishnakumaarmc@gmail.com",
+                        phone: "9986558635",
+                        // avatar: "https://via.placeholder.com/150",
+                    },
+                    {
+                        name: "Maahin Shankar   ",
+                        email: "Maahin64@gmail.com",
+                        phone: "9599946989",
+                        // avatar: "https://via.placeholder.com/150",
+                    },
+                    {
+                        name: "Lohit Kumar Nagarur",
+                        email: "klohit72@gmail.com",
+                        phone: "8310263592"
+                    }
+                ];
+
+                return (
+                    <div className="contact-page">
+                        <h1>Contact List</h1>
+                        {contacts.map((contact, index) => (
+                            <ContactCard
+                                key={index}
+                                name={contact.name}
+                                email={contact.email}
+                                phone={contact.phone}
+                            />
+                        ))}
+                        
+                        <button type="button" class="btn btn-warning"><a class="button" href="https://linktr.ee/restaurantgrp">Socials</a></button>
+
+
+                    </div>
+                );
+            }
+        }
+
+        // Render the ContactPage component into the root element
+        ReactDOM.render(<ContactPage />, document.getElementById('root'));
+    </script>
+    
 </body>
 </html>
-

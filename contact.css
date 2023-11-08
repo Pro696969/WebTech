@@ -1,0 +1,25 @@
+#root {
+    text-align: center;
+    margin-top: 250px;
+    color: rgb(208, 229, 151);
+    
+}
+body {
+    /* display: flex; */
+    align-items: center;
+    background-image:url('images/mahim.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-color: #f0f0f0;  
+}
+
+.mmm {
+    color: peachpuff;
+}
+ h1 {
+    color: rgb(240, 146, 23);
+ }
+
+ .contact-page {
+    font-size: 1.2rem;
+ }
