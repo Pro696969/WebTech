@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chineese food in Electronic City Phase  I</title>
+    <style>
+        body {
+            background-color: #ff5050;
+            font-family: 'Kozuha Mincho Pro', sans-serif;
+            text-align: center;
+            background-image:url("images/ecity1_asthetic.webp");
+            /* background-size:1440px; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            color:lightyellow;
+
+        }
+        .food-item {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .head{
+            /* font-size:xx-large; */
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            display: grid;
+            align-items: center; 
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 5px;
+        }
+        .main
+        {
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            font-size: 4rem;
+
+        }
+        .food-item img {
+            max-width: 200px;
+            max-height: 127px;
+            
+        }
+        .food-item {
+            display: grid;
+            align-items: center; 
+            grid-template-columns: 1fr 1fr 1fr;
+            /* column-gap: 5px; */
+            margin-left: 500px;
+        }
+        p{
+            font-size: large;
+            font-style:oblique;
+        }
+        .head{
+            text-align: center;
+        }
+        
+        /* .hell{
+            display: grid;
+            align-items: center; 
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 5px;
+        } */
+    </style>
+</head>
+<body>
+    
+    <div class="head" style="text-align: center; margin: auto;" ></div>
+        <h1 class="main">Chineese food in Electronic City phase I</h1>
+    </div>
+    <div class="food-item">
+        <img src="images/momos.jpg" alt="momos" width="200" height="127">
+        <div class="hell">
+            <h2>Momos</h2>
+            
+            <p>Authentic Mexican street momos.</p>
+            <p>Price: Rs.150</p>
+            <button onclick="location.href='payment.html?price=150'">Order Now</button>
+        </div>
+    </div>
+    
+    <div class="food-item">
+        <img src="images/StirFry.jpg" alt="Stir-Fry Noodles" width="200" height="127">
+        <div>
+
+            <h2>Stir-Fry Noodles</h2>
+            <p>Fresh and creamy avocado dip.</p>
+            <p>Price: Rs180</p>
+            <button onclick="location.href='payment.html?price=180'">Order Now</button>
+        </div>
+    </div>
+    
+    <div class="food-item">
+        
+        <img src="images/Springroll.jpg" alt="Springroll" width="200" height="127">
+        <div>
+            <h2>Springroll</h2>
+            <p>Spicy and flavorful Mexican Springroll.</p>
+            <p>Price: Rs120</p>
+            <button onclick="location.href='payment.html?price=120'">Order Now</button>
+        </div>
+    </div>
+</body>
+</html>

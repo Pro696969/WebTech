@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Cuisine in Electronic City Phase I</title>
+    <style>
+        body {
+            background-color: #ff9966;
+            font-family: 'Kozuha Mincho Pro', sans-serif;
+            
+            text-align: center;
+            background-image:url("images/indian.jpg    ");
+            /* background-size:1440px; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            color:rgb(0, 0, 0);
+        }
+        .food-item {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .head{
+            font-size:xx-large;
+            display: grid;
+            align-items: center; 
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 5px;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+        }
+        .food-item img {
+            max-width: 200px;
+            max-height: 127px;
+        }
+        p{
+            font-size: large;
+            font-style:oblique;
+        }
+        .main
+        {
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            font-size: 4rem;
+
+        }
+        .food-item {
+            display: grid;
+            align-items: center; 
+            grid-template-columns: 1fr 1fr 1fr;
+            /* column-gap: 5px; */
+            margin-left: 500px;
+        
+
+        }
+        h2,p{
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="head"  style="text-align: center; margin: auto;" > </div>
+        <h1 class="main" >Indian Cuisine in Electronic City Phase I</h1>
+    </div>
+    <div class="food-item">
+        
+        <img src="images/samosa.jpg" alt="Samosa" width="200" height="127">
+        <div>
+            <h2>Samosa</h2>
+            <p>Authentic Indian street samosas.</p>
+            <p>Price: Rs.150</p>
+            <button onclick="location.href='payment.html?price=150'">Order Now</button>
+        </div>
+    </div>
+    
+    <div class="food-item">
+        <img src="images/biryani.jpg" alt="Biryani" width="200" height="127">
+        <div>
+
+            <h2>Biryani</h2>
+            <p>Fragrant and flavorful Indian biryani.</p>
+            <p>Price: Rs.180</p>
+            <button onclick="location.href='payment.html?price=180'">Order Now</button>
+        </div>
+    </div>
+    
+    <div class="food-item">
+        <img src="images/pakora.jpg" alt="Pakora" width="200" height="127">
+        <div>
+
+            <h2>Pakora</h2>
+            <p>Spicy and crispy Indian pakoras.</p>
+            <p>Price: Rs.120</p>
+            <button onclick="location.href='payment.html?price=120'">Order Now</button>
+        </div>
+    </div>
+</body>
+</html>
