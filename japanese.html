@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Cuisine in Electronic City Phase II</title>
+    <style>
+        /*
+        body {
+            /* background-color: #30302e; 
+            font-family: 'Kozuha Mincho Pro', sans-serif;
+            text-align: center;
+        }
+        .food-item {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .head{
+            /* font-size:xx-large; 
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            display: grid;
+            align-items: center; 
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 5px;
+        }
+        .food-item {
+            margin-bottom: 20px;
+            /* text-align: center; 
+            font-size: large; 
+        }
+        .food-item {
+            display: grid;
+            align-items: center; 
+            grid-template-columns: 1fr 1fr 1fr;
+            /* column-gap: 5px; 
+            margin-left: 500px;
+        }
+        .head{
+            font-size:xx-large;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+        }
+        .food-item img {
+            max-width: 200px;
+            max-height: 127px;
+        }
+        p{
+            font-size: large;
+            font-style:oblique;
+        }
+        .head{
+            text-align: center;
+        } 
+        */
+
+        body {
+            background-color: #ff5050;
+            font-family: 'Kozuha Mincho Pro', sans-serif;
+            text-align: center;
+            background-image:url("images/japan.jpg");
+            /* background-size:1440px; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            color:rgb(154, 238, 154);
+            font-weight: bold;
+
+        }
+        .food-item {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .head{
+            /* font-size:xx-large; */
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            display: grid;
+            align-items: center; 
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            column-gap: 5px;
+        }
+        .main
+        {
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            font-size: 4rem;
+            text-align: center;
+
+        }
+        .food-item img {
+            max-width: 200px;
+            max-height: 127px;
+            
+        }
+        .food-item {
+            display: grid;
+            align-items: center; 
+            grid-template-columns: 1fr 1fr 1fr;
+            /* column-gap: 5px; */
+            margin-left: 500px;
+        }
+        p{
+            font-size: large;
+            font-style:oblique;
+        }
+        /* .head{
+            text-align: center;
+            border-left: 200px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="head"  style="text-align: center; margin-top: 150px; ">
+        <h1 class="main">Japanese Cuisine in Electronic City phase II</h1>
+    </div>
+    
+    <div class="food-item">
+        <img src="images/sushi.webp" alt="Sushi" width="200" height="127">
+        <div>
+            <h2>Sushi</h2>
+            <p>Price: Rs420</p>
+            <button onclick="location.href='payment.html?price=120'">Order Now</button>
+        </div>
+    </div>
+    
+    <div class="food-item">
+            <img src="images/ramen.jpg" alt="Ramen" width="200" height="127">
+            <div>
+                <h2>Ramen</h2>
+                <p>Price: Rs420</p>
+                <button onclick="location.href='payment.html?price=120'">Order Now</button>
+            </div>
+    </div>
+    
+    <div class="food-item">
+        <img src="images/tempura.jpg" alt="Tempura" width="200" height="127">
+        <div>
+            <h2>Tempura</h2>
+            <p>Price: Rs420</p>
+            <button onclick="location.href='payment.html?price=120'">Order Now</button>
+        </div>
+    </div>
+</body>
+</html>

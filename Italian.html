@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chineese food in Electronic City Phase  I</title>
+    <title>Italian Cuisine in Whitefield</title>
     <style>
         body {
-            background-color: #ff5050;
+            /* background-color: #ccffcc; */
             font-family: 'Kozuha Mincho Pro', sans-serif;
             text-align: center;
-            background-image:url("images/ecity1_asthetic.webp");
+            background-image:url("images/italian.jpg");
             /* background-size:1440px; */
             background-repeat: no-repeat;
             background-size: cover;
-            color:lightyellow;
+            /* color:lightyellow; */
+            background-blend-mode: lighten;
+            color: rgb(251, 255, 0);
             font-weight: bold;
+            
+
+
 
         }
         .food-item {
             margin-bottom: 20px;
             text-align: left;
         }
-        .head{
-            /* font-size:xx-large; */
+        .head {
+            font-size: xx-large;
             font-family: Brush Script MT, Brush Script Std, cursive;
-            display: grid;
-            align-items: center; 
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 5px;
         }
+
         .main
         {
             font-family: Brush Script MT, Brush Script Std, cursive;
@@ -54,49 +56,45 @@
         .head{
             text-align: center;
         }
-        
-        /* .hell{
-            display: grid;
-            align-items: center; 
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 5px;
-        } */
     </style>
 </head>
 <body>
-    
-    <div class="head" style="text-align: center; margin: auto;" ></div>
-        <h1 class="main">Chineese food in Electronic City phase I</h1>
-    </div>
-    <div class="food-item">
-        <img src="images/momos.jpg" alt="momos" width="200" height="127">
-        <div class="hell">
-            <h2>Momos</h2>
-            
-            <p>Authentic Mexican street momos.</p>
-            <p>Price: Rs.150</p>
-            <button onclick="location.href='payment.html?price=150'">Order Now</button>
-        </div>
-    </div>
+    <!-- <body style="background-image: url('italian.jpg');"> -->
+
+    <!-- <img src="italian.jpg" class="bgimg"> -->
+    <div class="head" style="text-align: center; margin: auto;">
+        <h1 class="main">Italian Cuisine in Whitefield</h1>
+    </div>  
     
     <div class="food-item">
-        <img src="images/StirFry.jpg" alt="Stir-Fry Noodles" width="200" height="127">
+        <img src="images/pizza.jpg" alt="Pizza" width="200" height="127">
         <div>
 
-            <h2>Stir-Fry Noodles</h2>
-            <p>Fresh and creamy avocado dip.</p>
-            <p>Price: Rs180</p>
-            <button onclick="location.href='payment.html?price=180'">Order Now</button>
+            <h2>Pizza</h2>
+            <p>Delicious traditional Italian pizza.</p>
+            <p>Price: Rs220</p>
+            <button onclick="location.href='payment.html?price=120'">Order Now</button>
         </div>
     </div>
     
     <div class="food-item">
-        
-        <img src="images/Springroll.jpg" alt="Springroll" width="200" height="127">
+        <img src="images/pasta.jpg" alt="Pasta" width="200" height="127">
         <div>
-            <h2>Springroll</h2>
-            <p>Spicy and flavorful Mexican Springroll.</p>
-            <p>Price: Rs120</p>
+
+            <h2>Pasta</h2>
+            <p>Authentic pasta with rich sauce.</p>
+            <p>Price: Rs320</p>
+            <button onclick="location.href='payment.html?price=120'">Order Now</button>
+        </div>
+    </div>
+    
+    <div class="food-item">
+        <img src="images/gelato.jpg" alt="Gelato" width="200" height="127">
+        <div>
+
+            <h2>Gelato</h2>
+            <p>Italian ice cream to satisfy your sweet tooth.</p>
+            <p>Price: Rs520</p>
             <button onclick="location.href='payment.html?price=120'">Order Now</button>
         </div>
     </div>
