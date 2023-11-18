@@ -202,3 +202,19 @@ h1 {
     -webkit-text-fill-color: transparent;
     font-style: italic;
   }
+
+
+  .registar {
+    position: absolute;
+    /* bottom: -100; */
+    margin-left: 800px;
+    margin-top: 3px;
+    margin-right: 50px;
+    /* padding: auto;
+    border: wheat;
+    border-color: bisque;
+    border-width: 100px; */
+  } 
+
+
+
