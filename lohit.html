@@ -10,6 +10,11 @@
             display: flex;
             justify-content: space-between;
             margin: 20px;
+            background-image:url("images/pxfuel.jpg");
+            /* background-size:1440px; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* font-weight: 500; */
         }
 
         .payment-details {
@@ -121,7 +126,7 @@
             <input type="text" id="upiId" name="upiId" placeholder="Enter UPI ID">
         </div>
 
-        <img src="" alt="Payment Option Image" class="payment-image" id="paymentImage">
+        <img src="images/cash-payment-icon-5.png" alt="Payment Option Image" class="payment-image" id="paymentImage">
     </div>
 
     <script>
@@ -151,15 +156,15 @@
             if (paymentMethod === 'card') {
                 cardDetails.style.display = 'block';
                 upiDetails.style.display = 'none';
-                paymentImage.src = 'card_image.jpg'; // Replace with the path to your card image
+                paymentImage.src = "images/credit-card-black-png-0.png"; // Replace with the path to your card image
             } else if (paymentMethod === 'upi') {
                 cardDetails.style.display = 'none';
                 upiDetails.style.display = 'block';
-                paymentImage.src = 'upi_image.jpg'; // Replace with the path to your UPI image
+                paymentImage.src = 'images/UPI_logo_PNG.png'; // Replace with the path to your UPI image
             } else {
                 cardDetails.style.display = 'none';
                 upiDetails.style.display = 'none';
-                paymentImage.src = ''; // Clear the image source
+                paymentImage.src = 'images/cash-payment-icon-5.png'; // Clear the image source
             }
         }
 
@@ -171,7 +176,7 @@
         {
             // Additional cash validation logic if needed
             alert('Your order has been placed ');
-            window.location.href = 'home.html';
+            window.location.href = 'index.html';
             return false; // Prevent form submission
         } 
         else if (paymentMethod === 'card') {
@@ -208,7 +213,7 @@
             }
 
             alert('Your order has been placed ');
-            window.location.href = 'home.html';
+            window.location.href = 'index.html';
             return false; // Prevent form submission
         }
 
@@ -233,7 +238,7 @@
             }
 
             alert('Your order has been placed ');
-            window.location.href = 'home.html';
+            window.location.href = 'index.html';
             return false; // Prevent form submission
         }
 
