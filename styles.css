@@ -1,5 +1,6 @@
 body {
-  background-image: url('images/blurred-abstract-background-restaurant-wallpaper_548821-36535.avif');
+  /* background-image: url('images/blurred-abstract-background-restaurant-wallpaper_548821-36535.avif'); */
+  background-image: url('images/brick-wall-1834784_1920.jpg');
   background-size: cover;
 }
 h1 {
@@ -197,7 +198,7 @@ h1 {
 
 h1 {
     font-size: 80px;
-    background: -webkit-linear-gradient(#ffffff, #3beb13);
+    background: -webkit-linear-gradient(#201919, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-style: italic;
