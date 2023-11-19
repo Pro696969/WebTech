@@ -207,13 +207,15 @@ h1 {
   .registar {
     position: absolute;
     /* bottom: -100; */
-    margin-left: 800px;
+    margin-left: 820px;
     margin-top: 3px;
     margin-right: 50px;
     /* padding: auto;
     border: wheat;
     border-color: bisque;
     border-width: 100px; */
+    
+    
   } 
 
 

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .payment-details {
+            max-width: 400px;
+        }
+
+        .payment-options {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+
+        form {
+            max-width: 100%;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity input {
+            width: 50px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .payment-image {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="payment-details">
+        <h2>Payment Details</h2>
+
+        <form action="#" method="post" onsubmit="return validatePayment()">
+            <label for="selectedItem">Selected Item:</label>
+            <input type="text" id="selectedItem" name="selectedItem" value="" readonly>
+
+            <label for="originalAmount">Original Amount:</label>
+            <input type="text" id="originalAmount" name="originalAmount" value="" readonly>
+
+            <label for="quantity">Quantity:</label>
+            <div class="quantity">
+                <input type="number" id="quantity" name="quantity" value="1" min="1" oninput="updateAmount()">
+            </div>
+
+            <label for="updatedAmount">Updated Amount:</label>
+            <input type="text" id="updatedAmount" name="updatedAmount" value="" readonly>
+
+            <!-- Other payment details go here -->
+
+            <input type="submit" value="Make Payment">
+        </form>
+    </div>
+
+    <div class="payment-options">
+        <h2>Payment Options</h2>
+
+        <label for="paymentMethod">Select Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod" required onchange="togglePaymentDetails()">
+            <option value="cash">Cash</option>
+            <option value="card">Card</option>
+            <option value="upi">UPI</option>
+        </select>
+
+        <!-- Additional fields based on the payment method -->
+        <div id="cardDetails" style="display: none;">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number">
+
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY">
+        </div>
+
+        <div id="upiDetails" style="display: none;">
+            <label for="upiId">UPI ID:</label>
+            <input type="text" id="upiId" name="upiId" placeholder="Enter UPI ID">
+        </div>
+
+        <img src="" alt="Payment Option Image" class="payment-image" id="paymentImage">
+    </div>
+
+    <script>
+        // Retrieve parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const price = urlParams.get('price');
+        const itemName = urlParams.get('item');
+
+        // Set the initial values of the input fields
+        document.getElementById('selectedItem').value = itemName;
+        document.getElementById('originalAmount').value = '₹' + parseFloat(price).toFixed(2);
+
+        function updateAmount() 
+        {
+            var quantity = parseInt(document.getElementById('quantity').value) || 2;
+            var updatedAmount = quantity * parseFloat(price);
+            document.getElementById('updatedAmount').value = '₹' + updatedAmount.toFixed(2);
+        }
+
+        function togglePaymentDetails()
+        {
+            var paymentMethod = document.getElementById('paymentMethod').value;
+            var cardDetails = document.getElementById('cardDetails');
+            var upiDetails = document.getElementById('upiDetails');
+            var paymentImage = document.getElementById('paymentImage');
+
+            if (paymentMethod === 'card') {
+                cardDetails.style.display = 'block';
+                upiDetails.style.display = 'none';
+                paymentImage.src = 'card_image.jpg'; // Replace with the path to your card image
+            } else if (paymentMethod === 'upi') {
+                cardDetails.style.display = 'none';
+                upiDetails.style.display = 'block';
+                paymentImage.src = 'upi_image.jpg'; // Replace with the path to your UPI image
+            } else {
+                cardDetails.style.display = 'none';
+                upiDetails.style.display = 'none';
+                paymentImage.src = ''; // Clear the image source
+            }
+        }
+
+        function validatePayment() 
+        {
+        var paymentMethod = document.getElementById('paymentMethod').value;
+
+        if (paymentMethod === 'cash') 
+        {
+            // Additional cash validation logic if needed
+            alert('Your order has been placed ');
+            window.location.href = 'home.html';
+            return false; // Prevent form submission
+        } 
+        else if (paymentMethod === 'card') {
+            // Validate card details
+            var cardNumber = document.getElementById('cardNumber').value;
+            var expiryDateRaw = document.getElementById('expiryDate').value;
+
+            var cardNumberLength = cardNumber.replace(/\s/g, '').length; // Remove spaces before counting
+            if (cardNumberLength !== 15 && cardNumberLength !== 16) {
+                alert('Please enter a valid card number with 15 or 16 numbers.');
+                return false; // Prevent form submission
+            }
+            
+            
+            console.log('Entered Expiry Date (Raw):', expiryDateRaw);
+
+            // Additional condition: Check if expiry date is not before the current date
+            var currentDate = new Date();
+            var enteredExpiryDate = new Date(expiryDateRaw);
+
+            
+            console.log('Current Date:', currentDate);
+            console.log('Entered Expiry Date:', enteredExpiryDate);
+
+            if (enteredExpiryDate.toString() === 'Invalid Date' || enteredExpiryDate < currentDate) 
+            {
+                alert('Please enter a valid expiry date.');
+                return false; // Prevent form submission
+            }
+            
+            if (!cardNumber || !expiryDateRaw) {
+                alert('Please enter all card details.');
+                return false; // Prevent form submission
+            }
+
+            alert('Your order has been placed ');
+            window.location.href = 'home.html';
+            return false; // Prevent form submission
+        }
+
+        
+        else if (paymentMethod === 'upi') 
+        {
+            // Validate UPI ID
+            var upiId = document.getElementById('upiId').value;
+
+            // Additional condition: Check if UPI ID has 10 numbers and ends with @ibl, @ybl, or @axl
+            var upiIdPattern = /\d{10}@(ibl|ybl|axl)$/;
+            if (!upiIdPattern.test(upiId))
+            {
+                alert('Please enter a valid UPI ID with 10 numbers and ending with @ibl, @ybl, or @axl.');
+                return false; // Prevent form submission
+            }
+
+            if (!upiId) 
+            {
+                alert('Please enter a valid UPI ID.');
+                return false; // Prevent form submission
+            }
+
+            alert('Your order has been placed ');
+            window.location.href = 'home.html';
+            return false; // Prevent form submission
+        }
+
+        return true; // Allow form submission for other payment methods
+    }
+</script>
+
+</body>
+</html>
