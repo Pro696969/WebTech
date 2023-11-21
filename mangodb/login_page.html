@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    html {
+      text-align: center;
+    }
+
+    body {
+      background-image: url("ree.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #ls {
+      display: inline-block;
+      text-align: left;
+      width: 300px;
+      border: 2px solid black;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #777;
+    }
+</style>
+</head>
+<body>
+
+  <form id="loginpg">
+    <section id="ls">
+      <h3>Login-In</h3>
+    <label for="Loginid"><strong>Login-Id:</strong></label>
+    <input type="number" id="Loginid" name="Loginid" required placeholder="Loginid" pattern="^[1-9]{1}[0-9]{4}"><br>
+    <label for="Password"><strong>Password</strong></label>
+    <input type="password" id="Password" name="Password" required placeholder="Password"><br>
+    <a href="Main_page.html"><button type="submit">Submit</button></a>
+  </section>
+  <blockquote style="font-weight: bold; color: #000000;">Don't have an account?</blockquote><a href="signup_page.html">Sign Up</a>
+  <br><br>
+  <a href="../index.html">Main Page</a>
+  </form>
+  <script src="script_login.js"></script>
+</body>
+</html>
